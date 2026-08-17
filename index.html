@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -9,10 +9,17 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="brand">Uma Stone Crusher</h1>
-      <p class="tag">Quality gravels & aggregates — 25+ years legacy</p>
-      <button class="nav-toggle" aria-expanded="false">Menu</button>
-      <nav class="site-nav" aria-label="Main navigation">
+      <div class="brand-wrap">
+        <h1 class="brand">Uma Stone Crusher</h1>
+        <p class="tag">Quality gravels & aggregates — 25+ years legacy</p>
+      </div>
+
+      <div class="controls">
+        <button id="theme-toggle" class="btn small" aria-pressed="false" title="Toggle theme">🌙</button>
+        <button class="nav-toggle btn" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+      </div>
+
+      <nav id="main-nav" class="site-nav" aria-label="Main navigation">
         <a href="#types">Gravel Types</a>
         <a href="#owners">Our Team</a>
         <a href="#contact">Contact</a>
@@ -27,29 +34,41 @@
     </section>
 
     <section id="types" class="types">
-      <h3>Gravel Types</h3>
-      <div class="grid gallery">
-        <article class="card">
-          <img src="assets/images/gravel1.svg" alt="River Gravel"/>
+      <div class="section-head">
+        <h3>Gravel Types</h3>
+        <p class="note">Photos are placeholders — replace with your product images.</p>
+      </div>
+
+      <div class="grid gallery" aria-live="polite">
+        <article class="card" tabindex="0">
+          <button class="img-btn" data-src="assets/images/gravel1.svg" aria-label="Open River Gravel photo">
+            <img src="assets/images/gravel1.svg" alt="River Gravel"/>
+          </button>
           <h4>River Gravel</h4>
           <p>Smooth, rounded — ideal for landscaping and decorative work.</p>
         </article>
-        <article class="card">
-          <img src="assets/images/gravel2.svg" alt="Crushed Stone"/>
+
+        <article class="card" tabindex="0">
+          <button class="img-btn" data-src="assets/images/gravel2.svg" aria-label="Open Crushed Stone photo">
+            <img src="assets/images/gravel2.svg" alt="Crushed Stone"/>
+          </button>
           <h4>Crushed Stone</h4>
           <p>Angular, excellent for concrete, roads, and foundations.</p>
         </article>
-        <article class="card">
-          <img src="assets/images/gravel3.svg" alt="Pea Gravel"/>
+
+        <article class="card" tabindex="0">
+          <button class="img-btn" data-src="assets/images/gravel3.svg" aria-label="Open Pea Gravel photo">
+            <img src="assets/images/gravel3.svg" alt="Pea Gravel"/>
+          </button>
           <h4>Pea Gravel</h4>
           <p>Small rounded stones used for pathways and drainage.</p>
         </article>
       </div>
-      <p class="note">Photos are placeholders. Replace files in assets/images/ with real photos of your gravels.</p>
     </section>
 
     <section id="owners" class="owners">
-      <h3>Owners</h3>
+      <div class="section-head"><h3>Owners</h3></div>
+
       <div class="owner-main">
         <img src="assets/images/owner_main.svg" alt="Main Owner" class="owner-photo main"/>
         <h4>Mr. Main Owner</h4>
@@ -58,17 +77,17 @@
 
       <div class="owner-row">
         <div class="owner">
-          <img src="assets/images/owner1.svg" alt="Owner 1" class="owner-photo"/>
+          <img src="assets/images/owner1.svg" alt="Owner 2" class="owner-photo"/>
           <h5>Owner 2</h5>
           <p>Operations</p>
         </div>
         <div class="owner">
-          <img src="assets/images/owner2.svg" alt="Owner 2" class="owner-photo"/>
+          <img src="assets/images/owner2.svg" alt="Owner 3" class="owner-photo"/>
           <h5>Owner 3</h5>
           <p>Sales</p>
         </div>
         <div class="owner">
-          <img src="assets/images/owner3.svg" alt="Owner 3" class="owner-photo"/>
+          <img src="assets/images/owner3.svg" alt="Owner 4" class="owner-photo"/>
           <h5>Owner 4</h5>
           <p>Logistics</p>
         </div>
@@ -116,6 +135,14 @@
       <p>Made with care — replace placeholders with your content.</p>
     </div>
   </footer>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true" aria-label="Image preview">
+    <div class="lightbox-inner">
+      <button class="lightbox-close btn" aria-label="Close preview">✕</button>
+      <img src="" alt="" class="lightbox-img" />
+    </div>
+  </div>
 
   <script src="assets/script.js"></script>
 </body>
