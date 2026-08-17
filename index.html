@@ -4,26 +4,45 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Uma Stone Crusher — Gravels & Aggregates</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="brand">Uma Stone Crusher</h1>
-      <p class="tag">Quality gravels & aggregates — 25+ years legacy</p>
-      <button class="nav-toggle" aria-expanded="false">Menu</button>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#types">Gravel Types</a>
-        <a href="#owners">Our Team</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="brand-wrap">
+        <h1 class="brand">Uma Stone Crusher</h1>
+        <p class="tag">Quality gravels & aggregates — 25+ years legacy</p>
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav id="primary-nav" class="site-nav" aria-label="Main navigation" hidden>
+          <a href="#types">Gravel Types</a>
+          <a href="#owners">Our Team</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h2>Reliable gravels for construction & landscaping</h2>
-      <p>Supply across local regions. Bulk & retail orders available.</p>
+      <div class="hero-inner">
+        <div>
+          <h2>Reliable gravels for construction & landscaping</h2>
+          <p class="lead">Bulk & retail supply across the region. Trusted by builders and landscapers for decades.</p>
+          <p class="hero-cta"><a class="btn" href="#contact">Get a quote</a> <a class="btn ghost" href="#types">See types</a></p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/images/gravel1.svg" alt="Gravel sample" />
+        </div>
+      </div>
     </section>
 
     <section id="types" class="types">
@@ -49,7 +68,7 @@
     </section>
 
     <section id="owners" class="owners">
-      <h3>Owners</h3>
+      <h3>Owners & Team</h3>
       <div class="owner-main">
         <img src="assets/images/owner_main.svg" alt="Main Owner" class="owner-photo main"/>
         <h4>Mr. Main Owner</h4>
@@ -78,7 +97,7 @@
     <section id="contact" class="contact">
       <h3>Contact Us</h3>
       <div class="contact-grid">
-        <div>
+        <div class="contact-info">
           <h4>Phone</h4>
           <p><a href="tel:+911234567890">+91 12345 67890</a></p>
 
@@ -103,7 +122,7 @@
               Message
               <textarea name="message" required></textarea>
             </label>
-            <button type="submit">Send</button>
+            <button type="submit" class="btn">Send</button>
           </form>
         </div>
       </div>
